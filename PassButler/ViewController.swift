@@ -10,13 +10,14 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    let defaultPasswordNumber = 10;
-    let defaultPasswordLength = 6;
+    let defaultPasswordNumber = 10; // Default password number
+    let defaultPasswordLength = 6;  // Default password length
     
     @IBOutlet weak var textarea: NSTextField!   // Generated password outlet
     @IBOutlet weak var passwordLengthInput: NSTextField!
-    @IBOutlet weak var passwordNumberInput: NSTextField!
+    @IBOutlet weak var passwordNumberInput: NSTextField! // Number of generated passwords
     @IBOutlet weak var specialCharsInput: NSButton!
+    @IBOutlet weak var mixedCaseInput: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,13 @@ class ViewController: NSViewController {
         
         for _ in 1...passwordNumber {
             
-            let randomPassword = String((0..<passwordLength).map{ _ in passwordCharacters[Int(arc4random_uniform(UInt32(passwordCharacters.count)))]})
+            var randomPassword = String((0..<passwordLength).map{ _ in passwordCharacters[Int(arc4random_uniform(UInt32(passwordCharacters.count)))]});
+            
+            if(mixedCaseInput.integerValue == 0) {
+                
+                randomPassword = randomPassword.lowercased();
+                
+            }
             
             generatedPasswordArray.append(randomPassword);
             

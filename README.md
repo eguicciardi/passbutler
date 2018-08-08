@@ -2,6 +2,8 @@
 
 PasswordButler (aka PassButler) is a tiny random password generator for macOS written in Swift.
 
+![](/docs/passbutler.png)
+
 ## Genesis
 It all started as way to get on track with the Swift programming language while I was waiting to pay a highway toll.
 

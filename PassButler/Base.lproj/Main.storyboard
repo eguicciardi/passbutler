@@ -235,9 +235,18 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hR8-ou-0kj">
+                                <rect key="frame" x="12" y="148" width="91" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Mixed case" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1yK-Zm-fCz">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="mixedCaseInput" destination="hR8-ou-0kj" id="uqC-eo-TUr"/>
                         <outlet property="passwordLengthInput" destination="Y5e-se-Dub" id="pzG-Wq-tJD"/>
                         <outlet property="passwordNumberInput" destination="rll-Hc-kht" id="kBt-Rx-Qom"/>
                         <outlet property="specialCharsInput" destination="CE9-to-1O6" id="pFr-sh-0nC"/>
